@@ -1,4 +1,6 @@
 defmodule BossClickWeb.PageLive do
+  @moduledoc false
+
   use BossClickWeb, :live_view
 
   @impl true
