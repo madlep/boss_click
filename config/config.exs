@@ -13,7 +13,7 @@ config :boss_click, BossClickWeb.Endpoint,
   secret_key_base: "QuWHSrKv2H+bwMkr54bqucVCoduIvq+IJak1pHfoUZbB+L30fn8HP6PxvNuuzvhb",
   render_errors: [view: BossClickWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: BossClick.PubSub,
-  live_view: [signing_salt: "DSo3IPOB"]
+  live_view: [signing_salt: "vHAGCR2Vjf73JiEyyeHGRnLwMxqwTWWJ"]
 
 # Configures Elixir's Logger
 config :logger, :console,
