@@ -89,3 +89,18 @@
 .alert:empty {
   display: none;
 }
+
+.bossClick {
+  cursor: pointer;
+}
+
+.bossClick svg text {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.bossClick svg text::selection {
+  background: none;
+}

@@ -24,6 +24,8 @@ defmodule BossClickWeb do
       import Plug.Conn
       import BossClickWeb.Gettext
       alias BossClickWeb.Router.Helpers, as: Routes
+
+      import Phoenix.LiveView.Controller
     end
   end
 
