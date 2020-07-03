@@ -11,6 +11,7 @@ defmodule BossClick.Application do
       BossClickWeb.Telemetry,
       # Start the PubSub system
       {Phoenix.PubSub, name: BossClick.PubSub},
+      {BossClick.Boss, 1000},
       # Start the Endpoint (http/https)
       BossClickWeb.Endpoint
       # Start a worker by calling: BossClick.Worker.start_link(arg)
