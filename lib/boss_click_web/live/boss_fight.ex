@@ -8,8 +8,6 @@ defmodule BossClickWeb.BossFight do
 
   use Phoenix.LiveView
 
-  @starting_health 13
-
   @impl true
   @spec mount(LiveView.unsigned_params() | :not_mounted_at_router, map(), Socket.t()) ::
           {:ok, Socket.t()}
