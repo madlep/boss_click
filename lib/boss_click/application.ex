@@ -5,6 +5,9 @@ defmodule BossClick.Application do
 
   use Application
 
+  @impl true
+  @spec start(Application.start_type(), term()) ::
+          {:ok, pid()} | {:ok, pid(), Application.state()} | {:error, reason :: term()}
   def start(_type, _args) do
     children = [
       # Start the Telemetry supervisor
@@ -26,6 +29,8 @@ defmodule BossClick.Application do
 
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
+  @impl true
+  @spec config_change(keyword(), keyword(), [atom()]) :: :ok
   def config_change(changed, _new, removed) do
     BossClickWeb.Endpoint.config_change(changed, removed)
     :ok
