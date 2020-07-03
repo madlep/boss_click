@@ -1,0 +1,31 @@
+<button phx-click="attack">FIGHT!</button>
+<button phx-click="heal">Heal</button>
+<h2><%= if @boss.state == :defeated do %>You win!<%= else %>Boss is fighting<%= end %></h2>
+<div class="bossClick">
+  <svg viewBox="0 0 1000 100">
+    <defs>
+      <linearGradient id="health_grad" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0" stop-color="#dbd9d9"/>
+        <stop offset="0.1" stop-color="#ff0000"/>
+        <stop offset="0.9" stop-color="#ff0000"/>
+        <stop offset="1" stop-color="#000000"/>
+      </linearGradient>
+      <linearGradient id="background_grad" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0" stop-color="#dbd9d9"/>
+        <stop offset="0.1" stop-color="#3d3a3a"/>
+        <stop offset="0.9" stop-color="#3d3a3a"/>
+        <stop offset="1" stop-color="#000000"/>
+      </linearGradient>
+    </defs>
+    <g class="boss_health">
+      <g class="layer" id="svg_2">
+        <rect x="98" y="48"  width="804"             height="54" id="boss_health_border"     fill="#ffffff" stroke="#000000" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="2"/>
+        <rect x="100" y="50" width="800"             height="50" id="boss_health_background" fill="url(#background_grad)"/>
+        <rect x="100" y="50" width="<%= @boss.health_percent * 8 %>" height="50" id="boss_health_level"      fill="url(#health_grad)"/>
+      </g>
+      <text x="500" y="89" fill="#ffffff" font-family="Helvetica" font-size="40" font-weight="bold" id="boss_health_text" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" text-anchor="middle" xml:space="preserve">
+        <%= @boss.health %>/<%= @boss.max_health %>      <%= @boss.health_percent %>%
+      </text>
+    </g>
+  </svg>
+</div>
