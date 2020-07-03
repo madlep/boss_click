@@ -31,11 +31,6 @@ defmodule BossClickWeb.BossFight do
   end
 
   @impl true
-  def handle_event("heal", _params, socket) do
-    {:noreply, update(socket, :boss, &Boss.heal(&1, 1))}
-  end
-
-  @impl true
   @spec handle_info(term(), Socket.t()) :: {:noreply, Socket.t()}
   def handle_info(:respawn, socket) do
     {:noreply, assign(socket, :boss, Boss.new(@starting_health))}

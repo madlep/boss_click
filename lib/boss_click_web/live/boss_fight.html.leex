@@ -1,5 +1,4 @@
 <button phx-click="attack">FIGHT!</button>
-<button phx-click="heal">Heal</button>
 <h2><%= if @boss.state == :defeated do %>You win!<% else %>Boss is fighting<% end %></h2>
 <div class="bossClick">
   <svg viewBox="0 0 1000 200">
