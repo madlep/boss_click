@@ -17,7 +17,7 @@ defmodule BossClickWeb.Router do
   scope "/", BossClickWeb do
     pipe_through :browser
 
-    live "/", BossFight
+    live "/", BossFightLive
   end
 
   # Other scopes may use custom stacks.

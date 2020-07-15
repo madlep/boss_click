@@ -1,4 +1,4 @@
-defmodule BossClickWeb.BossFight do
+defmodule BossClickWeb.BossFightLive do
   @moduledoc false
 
   alias Phoenix.LiveView

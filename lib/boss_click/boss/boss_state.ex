@@ -5,17 +5,15 @@ defmodule BossClick.Boss.BossState do
 
   @type t() :: %__MODULE__{
           health: integer(),
-          health_percent: integer(),
           max_health: integer(),
           state: :alive | :defeated
         }
-  defstruct [:health, :health_percent, :max_health, :state]
+  defstruct [:health, :max_health, :state]
 
   @spec new(integer()) :: t()
   def new(max_health) do
     %BossState{
       health: max_health,
-      health_percent: 100,
       max_health: max_health,
       state: :alive
     }
@@ -51,8 +49,7 @@ defmodule BossClick.Boss.BossState do
       |> max(0)
       |> min(max_health)
 
-    new_health_percent = (new_health / max_health * 100) |> round
-    %BossState{boss_state | health: new_health, health_percent: new_health_percent}
+    %BossState{boss_state | health: new_health}
   end
 
   @spec update_state(t()) :: t()

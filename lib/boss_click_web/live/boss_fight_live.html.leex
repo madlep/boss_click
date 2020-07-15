@@ -26,10 +26,10 @@
       <g class="layer" id="svg_2">
         <rect x="0" y="0" width="804"                             height="50" id="boss_health_border"     fill="#ffffff" stroke="#000000" stroke-width="2"/>
         <rect x="2" y="2" width="800"                             height="46" id="boss_health_background" fill="url(#background_grad)"/>
-        <rect x="2" y="2" width="<%= @boss.health_percent * 8 %>" height="46" id="boss_health_level"      fill="url(#health_grad)"/>
+        <rect x="2" y="2" width="<%= @boss.health / @boss.max_health * 800 %>" height="46" id="boss_health_level"      fill="url(#health_grad)"/>
       </g>
       <text x="400" y="40" fill="#ffffff" font-family="Helvetica" font-size="40" font-weight="bold" id="boss_health_text" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" text-anchor="middle" xml:space="preserve">
-        <%= @boss.health %>/<%= @boss.max_health %>      <%= @boss.health_percent %>%
+        <%= @boss.health %>/<%= @boss.max_health %>      <%= (@boss.health / @boss.max_health) * 100 |> round %>%
       </text>
     </g>
   </svg>
