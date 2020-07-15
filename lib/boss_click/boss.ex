@@ -2,9 +2,8 @@ defmodule BossClick.Boss do
   @moduledoc false
 
   alias BossClick.Boss.BossServer
-  alias BossClick.Boss.BossState
 
-  @type state() :: BossState.t()
+  @type state() :: BossClick.Boss.BossState.t()
 
   @spec start_link(max_health :: integer, GenServer.name()) :: {:ok, pid()}
   def start_link(max_health, name \\ BossServer) do
