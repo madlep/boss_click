@@ -10,7 +10,6 @@ defmodule BossClick.Boss.BossServer do
 
   @impl true
   def init(max_health) do
-    Phoenix.PubSub.subscribe(BossClick.PubSub, "boss:1")
     Process.send_after(self(), {:heal, @heal_amount}, @heal_ms)
     {:ok, BossState.new(max_health)}
   end
