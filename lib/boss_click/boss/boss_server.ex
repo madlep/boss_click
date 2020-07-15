@@ -9,6 +9,7 @@ defmodule BossClick.Boss.BossServer do
   @heal_ms 250
 
   @impl true
+  @spec init(integer) :: {:ok, BossClick.Boss.BossState.t()}
   def init(max_health) do
     Process.send_after(self(), {:heal, @heal_amount}, @heal_ms)
     {:ok, BossState.new(max_health)}
