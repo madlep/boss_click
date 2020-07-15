@@ -17,8 +17,6 @@ defmodule BossClickWeb.BossFight do
   end
 
   @impl true
-
-  @impl true
   @spec handle_event(binary(), LiveView.unsigned_params(), Socket.t()) :: {:noreply, Socket.t()}
   def handle_event("attack", _params, socket) do
     Boss.damage(1)
