@@ -1,6 +1,8 @@
 # BossClick
 
-Simple Elixir Phoenix LibeView  app for [talk](https://www.youtube.com/watch?v=f397kQSb_y8)  at Elixir Australia.
+Simple Elixir Phoenix LiveView  app for [talk](https://www.youtube.com/watch?v=f397kQSb_y8)  at Elixir Australia.
+
+Running (sometimes) at [https://bossclick.madlep.com/](https://bossclick.madlep.com/)
 
 Code at [github.com/madlep/boss_click](https://github.com/madlep/boss_click)
 
